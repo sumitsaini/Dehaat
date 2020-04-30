@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "author_name": "William Shakespeare",
+      "author_bio": "William Shakespeare (April 26, 1564 (baptism)–d. April 23, 1616) was an English poet and playwright and is considered a key member of the English literature canon.",
+      "books": [
+        {
+          "published_date": "18-08-2010",
+          "publisher": "Maple Press",
+          "title": "The Tempest",
+          "description": "'Hell is empty and all the devils are here.'\nPenned by the world’s greatest dramatist, William Shakespeare, The Tempest introduced the concept of tragicomedy to drama literature. The play is set on a remote island, where Prospero, the rightful Duke of Milan and his daughter Miranda reside since past 12 years.",
+          "price": "200"
+        },
+        {
+          "published_date": "01-01-2013",
+          "publisher": "Arden Shakespeare",
+          "title": "Twelfth Night: Third Series",
+          "description": "Critically acclaimed as one of Shakespeare's most complex and intriguing plays, Twelfth Night is a classic romantic comedy of mistaken identities. In recent years it has returned to the centre of critical debate surrounding gender and sexuality.",
+          "price": "250"
+        }
+      ]
+    },
+    {
+      "author_name": "Dan Brown",
+      "author_bio": "Daniel “Dan” Brown was born on June 22, 1964. He is an American writer, who is best known for writing thriller fiction.",
+      "books": [
+        {
+          "published_date": "28-08-2009",
+          "publisher": "RHUK",
+          "title": "Angels and Demons",
+          "description": "‘Angels and Demons’ is a plot where a globally celebrated scientist, Leonardo Vetra of CERN Institute, Switzerland is killed and a mystifying symbol is branded into his torso.",
+          "price": "240"
+        },
+        {
+          "published_date": "28-08-2009",
+          "publisher": "RHUK",
+          "title": "The Da Vinci Code",
+          "description": "The plot in ‘The Da Vinci Code’ revolves around Robert Langdon, who interprets symbols at Harvard. He gets a shocking phone call at mid-night while in Paris.",
+          "price": "280"
+        }
+      ]
+    },
+    {
+      "author_name": "paulo coelho",
+      "author_bio": "Paulo Cohelo is one of the most celebrated writers in the world today.",
+      "books": [
+        {
+          "published_date": "17-10-2005",
+          "publisher": "Harper",
+          "title": "Veronika Decides to Die ",
+          "description": "'Veronika Decides to Die' is a beautiful tale of hope and happiness.",
+          "price": "300"
+        },
+        {
+          "published_date": "20-03-2006",
+          "publisher": "Harper",
+          "title": "Eleven Minutes",
+          "description": "‘Eleven minutes’ is the masterpiece of Brazilian bestselling author Paulo Coelho.",
+          "price": "380"
+        }
+      ]
+    }
+  ]
+}
+
