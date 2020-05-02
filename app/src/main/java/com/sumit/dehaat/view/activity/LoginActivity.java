@@ -62,6 +62,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     /**
      * this method check is email and password is not empty and valid format
+     *
      * @return
      */
     public String checkError() {
@@ -96,8 +97,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 @Override
                 public void onChanged(LoginResponse loginResponse) {
                     Utils.dismissDialog();
-                    if (loginResponse != null) {
+                    if (loginResponse != null && loginResponse.getHttpCode() == Utils.HTTP_SUCCESS) {
                         launchMainActivity(loginResponse.getToken());
+                    } else {
+                        Utils.displayErrorMessage(parent, "Invalid credientails");
                     }
 
                 }
@@ -108,10 +111,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     /**
      * This method launch home activity
+     *
      * @param token auth token, we can save it for future calls
      */
     public void launchMainActivity(String token) {
-        Utils.updateLoginStatus(this,true);
+        Utils.updateLoginStatus(this, true);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();

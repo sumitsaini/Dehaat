@@ -20,6 +20,8 @@ public class Utils {
     public static Dialog dialog;
     public static String EMAIL_REGEX = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     public static String COMMON_PREF = "common_pref";
+    public static final int HTTP_SUCCESS = 200;
+    public static final int HTTP_FAILURE = 400;
 
     public static void displayErrorMessage(View view, String message) {
         Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show();

@@ -1,21 +1,14 @@
 package com.sumit.dehaat.repo;
 
-import android.content.Context;
-import android.os.AsyncTask;
-
 import androidx.lifecycle.MutableLiveData;
 
 import com.google.gson.JsonObject;
-import com.sumit.dehaat.model.Author;
-import com.sumit.dehaat.model.Book;
+import com.sumit.dehaat.Utils;
 import com.sumit.dehaat.model.LoginResponse;
-import com.sumit.dehaat.repo.database.AppDatabase;
 import com.sumit.dehaat.repo.services.CommonApi;
 import com.sumit.dehaat.repo.services.RetrofitService;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,6 +19,7 @@ import retrofit2.Response;
  */
 public class CommonRepository {
 
+
     private CommonApi commonApi;
     private final String TAG = CommonRepository.class.getSimpleName();
 
@@ -35,7 +29,8 @@ public class CommonRepository {
 
     /**
      * This method help login with users
-     * @param email Input email
+     *
+     * @param email    Input email
      * @param password input password
      * @return response data
      */
@@ -51,12 +46,22 @@ public class CommonRepository {
 
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                mutableLiveData.postValue(response.body());
+                if (response.raw().code() == 200) {
+                    LoginResponse loginResponse = response.body();
+                    loginResponse.setHttpCode(Utils.HTTP_SUCCESS);
+                    mutableLiveData.postValue(response.body());
+                } else {
+                    LoginResponse loginResponse = new LoginResponse();
+                    loginResponse.setHttpCode(Utils.HTTP_FAILURE);
+                    mutableLiveData.postValue(loginResponse);
+                }
             }
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                mutableLiveData.postValue(null);
+                LoginResponse loginResponse = new LoginResponse();
+                loginResponse.setHttpCode(Utils.HTTP_FAILURE);
+                mutableLiveData.postValue(loginResponse);
             }
         });
 
