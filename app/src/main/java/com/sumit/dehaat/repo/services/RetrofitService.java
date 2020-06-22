@@ -32,12 +32,11 @@ public class RetrofitService {
 
     /**
      * Single instance retrofit class method
-     * @param cacheFile
      * @return
      */
-    public static Retrofit getInstance(File cacheFile) {
+    public static Retrofit getInstance() {
         if (retrofit == null) {
-            retrofit = new Retrofit.Builder().baseUrl(BASE_URL).client(getOkHttpClient(cacheFile)).addConverterFactory(GsonConverterFactory.create()).build();
+            retrofit = new Retrofit.Builder().baseUrl(BASE_URL).client(getOkHttpClient()).addConverterFactory(GsonConverterFactory.create()).build();
         }
         return retrofit;
 
@@ -45,16 +44,12 @@ public class RetrofitService {
 
     /**
      * this method setup http client and logging and intercepator
-     * @param file
      * @return
      */
-    public static OkHttpClient getOkHttpClient(File file) {
+    public static OkHttpClient getOkHttpClient() {
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
-
-        int cacheSize = 10 * 1024 * 1024;
-        Cache cache = new Cache(file, cacheSize);
 
         OkHttpClient.Builder okHttpClientBuilder = new OkHttpClient.Builder();
         okHttpClientBuilder.connectTimeout(30, TimeUnit.SECONDS);
@@ -80,8 +75,6 @@ public class RetrofitService {
                 }
             }
         });
-
-        okHttpClientBuilder.cache(cache);
 
         return okHttpClientBuilder.build();
 

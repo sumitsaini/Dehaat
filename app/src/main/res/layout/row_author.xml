@@ -6,6 +6,7 @@
     app:cardBackgroundColor="@android:color/white"
     app:cardCornerRadius="@dimen/normal_padding"
     app:cardElevation="@dimen/normal_padding"
+    android:background="?attr/selectableItemBackgroundBorderless"
     android:id="@+id/card_parent"
     app:cardUseCompatPadding="true"
     app:contentPadding="@dimen/large_padding">

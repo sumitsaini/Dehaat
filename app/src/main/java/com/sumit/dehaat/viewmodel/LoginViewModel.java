@@ -4,18 +4,17 @@ import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.sumit.dehaat.model.LoginResponse;
 import com.sumit.dehaat.repo.CommonRepository;
 
-public class LoginViewModel extends AndroidViewModel {
+public class LoginViewModel extends ViewModel {
 
     private CommonRepository commonRepository;
 
-    public LoginViewModel(Application application) {
-        super(application);
-
-        commonRepository = new CommonRepository(application.getCacheDir());
+    public LoginViewModel() {
+        commonRepository = new CommonRepository();
     }
 
 

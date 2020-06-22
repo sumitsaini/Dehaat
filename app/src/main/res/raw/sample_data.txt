@@ -2,7 +2,7 @@
   "data": [
     {
       "author_name": "William Shakespeare",
-      "author_bio": "William Shakespeare (April 26, 1564 (baptism)–d. April 23, 1616) was an English poet and playwright and is considered a key member of the English literature canon.",
+      "author_bio": "William Shakespeare, Shakespeare also spelled Shakspere, byname Bard of Avon or Swan of Avon, (baptized April 26, 1564, Stratford-upon-Avon, Warwickshire, England—died April 23, 1616, Stratford-upon-Avon), English poet, dramatist, and actor often called the English national poet and considered by many to be the greatest dramatist of all time.",
       "books": [
         {
           "published_date": "18-08-2010",
@@ -22,7 +22,7 @@
     },
     {
       "author_name": "Dan Brown",
-      "author_bio": "Daniel “Dan” Brown was born on June 22, 1964. He is an American writer, who is best known for writing thriller fiction.",
+      "author_bio": "Dan Brown is the author of numerous #1 bestselling novels, including The Da Vinci Code, which has become one of the best selling novels of all time as well as the subject of intellectual debate among readers and scholars. Brown’s novels are published in 52 languages around the world with 200 million copies in print.",
       "books": [
         {
           "published_date": "28-08-2009",
@@ -42,7 +42,7 @@
     },
     {
       "author_name": "paulo coelho",
-      "author_bio": "Paulo Cohelo is one of the most celebrated writers in the world today.",
+      "author_bio": "The Brazilian author PAULO COELHO was born in 1947 in the city of Rio de Janeiro. Before dedicating his life completely to literature, he worked as theatre director and actor, lyricist and journalist. In 1986, PAULO COELHO did the pilgrimage to Saint James of Compostella, an experience later to be documented in his book The Pilgrimage. In the following year, COELHO published The Alchemist.",
       "books": [
         {
           "published_date": "17-10-2005",

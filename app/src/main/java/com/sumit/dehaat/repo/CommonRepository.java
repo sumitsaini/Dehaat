@@ -23,8 +23,8 @@ public class CommonRepository {
     private CommonApi commonApi;
     private final String TAG = CommonRepository.class.getSimpleName();
 
-    public CommonRepository(File fileCache) {
-        commonApi = RetrofitService.getInstance(fileCache).create(CommonApi.class);
+    public CommonRepository() {
+        commonApi = RetrofitService.getInstance().create(CommonApi.class);
     }
 
     /**

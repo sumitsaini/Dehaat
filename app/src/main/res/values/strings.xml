@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Dehaat</string>
+    <string name="app_name">Olx Author</string>
     <string name="action_logout">Logout</string>
 
-    <string name="app_new_name">Dehaat Author</string>
+    <string name="app_new_name">Olx Author</string>
     <string name="txt_error_email_empty">Please enter email id</string>
     <string name="txt_error_password_empty">Please enter password</string>
     <string name="txt_error_wrong_email">Please enter correct email id</string>
